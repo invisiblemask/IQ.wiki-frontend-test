@@ -1,5 +1,14 @@
-import Image from "next/image";
+import { Feed, HomeSide, Navbar, Stories } from "@/components";
 
 export default function Home() {
-  return <main className="flex min-h-screen"></main>;
+  return (
+    <main className="min-h-screen">
+      <Navbar />
+      <Stories />
+      <div className="flex flex-row justify-center items-center mt-0 xl:mt-40">
+        <Feed />
+        <HomeSide />
+      </div>
+    </main>
+  );
 }

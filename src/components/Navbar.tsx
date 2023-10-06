@@ -1,10 +1,24 @@
-import { Box, Button, ButtonGroup, Flex, Image } from "@chakra-ui/react";
+import { navIcons } from "@/app/constants";
+import { Box, Flex, Image, Input } from "@chakra-ui/react";
 
 export default function Navbar() {
   return (
     <nav>
-      <Box px="6" pb="4" position="fixed" w="100%">
-        <Flex justifyContent="space-between" alignItems="center">
+      <Box
+        px={["6", "56"]}
+        py="1"
+        position="fixed"
+        h={["53px"]}
+        top="0"
+        w="100%"
+        bgColor="white"
+        borderBottom="1px"
+        borderColor="gray.200"
+        sx={{
+          zIndex: 20,
+        }}
+      >
+        <Flex justifyContent={["space-between"]} alignItems="center">
           <svg
             aria-label="Instagram"
             className="_ab6-"
@@ -20,10 +34,35 @@ export default function Navbar() {
               fillRule="evenodd"
             ></path>
           </svg>
+          <Box display={["none", "block"]}>
+            <Input
+              variant="outline"
+              placeholder="Search"
+              borderColor="#DBDBDB"
+              outline="none"
+              focusBorderColor="#DBDBDB"
+              width="215px"
+              height="28px"
+              mx="10"
+            />
+          </Box>
+          <Box display={["none", "block"]}>
+            <Flex gap={4} flexDirection="row">
+              {navIcons.map((icon, index) => (
+                <Image
+                  key={index}
+                  src={icon.image}
+                  alt={icon.name}
+                  boxSize="21px"
+                />
+              ))}
+            </Flex>
+          </Box>
           <Image
             src="/icons/messenger.png"
             alt="messenger icon"
-            boxSize="30px"
+            boxSize="25px"
+            display={["block", "none"]}
           />
         </Flex>
       </Box>
