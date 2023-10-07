@@ -5,7 +5,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Stories />
-      <div className="flex flex-row justify-center mt-0 xl:mt-40 gap-7">
+      <div className="flex flex-row justify-center mt-0 md:mt-20 xl:mt-40 gap-7">
         <Feed />
         <HomeSide />
       </div>

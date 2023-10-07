@@ -1,5 +1,5 @@
 import { icons } from "@/app/constants";
-import { Box, Center, Flex, Image, Spacer } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 
 export default function BottomNavigation() {
   return (
@@ -10,9 +10,9 @@ export default function BottomNavigation() {
       bottom={0}
       w="100%"
       py="4"
-      px="6"
+      px={["6", "20"]}
       bgColor="white"
-      display={["block", "block", "none", "none"]}
+      display={["block", "block", "block", "none", "none"]}
     >
       <Flex justifyContent="space-between" alignItems="center">
         {icons.map((icon, index) => (

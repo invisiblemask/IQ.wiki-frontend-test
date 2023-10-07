@@ -1,8 +1,8 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
 export default function HomeSide() {
   return (
-    <Box display={["none", "block"]} py="4" width="320px">
+    <Box display={["none", "none", "none", "block"]} py="4" width="320px">
       <Box
         gap="4"
         alignItems="center"

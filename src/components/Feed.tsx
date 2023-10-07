@@ -4,7 +4,12 @@ import Carousel from "./Carousel";
 
 export default function Feed() {
   return (
-    <Card overflow={["auto"]} bgColor={["white"]} mb="4" w={["full", "612px"]}>
+    <Card
+      overflow={["auto"]}
+      bgColor={["white"]}
+      mb={["4", "10", "20", "4"]}
+      w={["full", "612px"]}
+    >
       <Box>
         <Carousel slides={stories} />
         <Flex

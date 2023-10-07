@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav>
       <Box
-        px={["6", "400px"]}
+        px={["6", "0", "0", "0", "0", "400px"]}
         py="1"
         position="fixed"
         h={["53px"]}
@@ -18,7 +18,11 @@ export default function Navbar() {
           zIndex: 20,
         }}
       >
-        <Flex justifyContent={["space-between"]} alignItems="center">
+        <Flex
+          justifyContent={["space-between"]}
+          alignItems="center"
+          px={["0", "20"]}
+        >
           <svg
             aria-label="Instagram"
             className="_ab6-"
@@ -34,7 +38,7 @@ export default function Navbar() {
               fillRule="evenodd"
             ></path>
           </svg>
-          <Box display={["none", "block"]}>
+          <Box display={["none", "none", "none", "block"]}>
             <Input
               variant="outline"
               placeholder="Search"
@@ -47,7 +51,7 @@ export default function Navbar() {
             />
           </Box>
           <Box
-            display={["none", "flex"]}
+            display={["none", "none", "none", "flex"]}
             flexDirection="row"
             gap={4}
             alignItems="center"
@@ -76,7 +80,7 @@ export default function Navbar() {
             src="/icons/messenger.png"
             alt="messenger icon"
             boxSize="25px"
-            display={["block", "none"]}
+            display={["block", "block", "block", "none"]}
           />
         </Flex>
       </Box>
