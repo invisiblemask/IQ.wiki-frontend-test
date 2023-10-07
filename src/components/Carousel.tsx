@@ -3,6 +3,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { useState } from "react";
+import { ImageModal } from "./ImageModal";
 
 interface CarouselProps {
   slides: { name: string; image: string }[];
@@ -10,6 +11,17 @@ interface CarouselProps {
 
 export default function Carousel({ slides }: CarouselProps) {
   const [current, setCurrent] = useState<number>(0);
+  const [selectedImage, setSelectedImage] = useState<string>("");
+  const [isOpen, setIsopen] = useState<boolean>(false);
+
+  const onOpen = (image: string) => {
+    setIsopen(true);
+    setSelectedImage(image);
+  };
+
+  const onClose = () => {
+    setIsopen(false);
+  };
 
   const prev = () => {
     setCurrent((current) => (current === 0 ? slides.length - 1 : current - 1));
@@ -30,7 +42,7 @@ export default function Carousel({ slides }: CarouselProps) {
       py={["6"]}
     >
       <div
-        className="flex transition-transform ease-out duration-500 gap-3 pr-2"
+        className="flex transition-transform ease-out duration-500 gap-4 pr-2"
         style={{ transform: `translateX(-${current * 20}%)` }}
       >
         {slides.map((slide, index) => (
@@ -39,12 +51,14 @@ export default function Carousel({ slides }: CarouselProps) {
             flexDirection="column"
             gap="4px"
             alignItems="center"
+            cursor="pointer"
           >
             <Box
               borderRadius="full"
               bgGradient="linear(to-b, #DE0046, #F7A34B)"
               p="2px"
               minWidth="max"
+              onClick={() => onOpen(slide.image)}
             >
               <Box
                 bgColor="white"
@@ -66,6 +80,9 @@ export default function Carousel({ slides }: CarouselProps) {
             <Text fontSize={["x-small", "md", "12px"]} fontWeight="medium">
               {slide.name}
             </Text>
+            {isOpen && (
+              <ImageModal isOpen onClose={onClose} image={selectedImage} />
+            )}
           </Flex>
         ))}
       </div>

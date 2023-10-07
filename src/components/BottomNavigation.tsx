@@ -12,7 +12,7 @@ export default function BottomNavigation() {
       py="4"
       px="6"
       bgColor="white"
-      display={{ xl: "none" }}
+      display={["block", "block", "none", "none"]}
     >
       <Flex justifyContent="space-between" alignItems="center">
         {icons.map((icon, index) => (

@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav>
       <Box
-        px={["6", "56"]}
+        px={["6", "400px"]}
         py="1"
         position="fixed"
         h={["53px"]}
@@ -46,16 +46,30 @@ export default function Navbar() {
               mx="10"
             />
           </Box>
-          <Box display={["none", "block"]}>
-            <Flex gap={4} flexDirection="row">
+          <Box
+            display={["none", "flex"]}
+            flexDirection="row"
+            gap={4}
+            alignItems="center"
+          >
+            <Flex gap={4} flexDirection="row" alignItems="center">
               {navIcons.map((icon, index) => (
                 <Image
                   key={index}
                   src={icon.image}
                   alt={icon.name}
                   boxSize="21px"
+                  cursor="pointer"
                 />
               ))}
+              <Image
+                src="/images/profile-img.png"
+                alt="profile img"
+                borderRadius="full"
+                objectFit="cover"
+                width="28px"
+                height="28px"
+              />
             </Flex>
           </Box>
           <Image

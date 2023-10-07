@@ -1,11 +1,11 @@
-import { Badge, Box, Card, Flex, Image, Stack, Text } from "@chakra-ui/react";
-import Carousel from "./Carousel";
 import { stories } from "@/app/constants";
+import { Box, Card, Flex, Image, Text } from "@chakra-ui/react";
+import Carousel from "./Carousel";
 
 export default function Feed() {
   return (
-    <Card overflow={["auto"]} bgColor={["white"]}>
-      <Box w={["100%", "612px"]}>
+    <Card overflow={["auto"]} bgColor={["white"]} mb="4" w={["full", "612px"]}>
+      <Box>
         <Carousel slides={stories} />
         <Flex
           justifyContent={["space-between"]}
@@ -19,7 +19,6 @@ export default function Feed() {
               borderRadius="full"
               bgGradient="linear(to-b, #DE0046, #F7A34B)"
               p="2px"
-              minWidth="max"
             >
               <Box
                 bgColor="white"
@@ -44,13 +43,12 @@ export default function Feed() {
           <Image
             src="/icons/ellipsis.png"
             alt="ellipsis icon"
-            w={["16px", "20px"]}
-            h={["16px", "20px"]}
-            objectFit={["contain"]}
+            w="14px"
+            h="14px"
           />
         </Flex>
       </Box>
-      <Image src="/images/post-1.png" alt="terrylucas post" />
+      <Image src="/images/post-1.png" alt="terrylucas post" boxSize="" />
       <Flex
         my={["4"]}
         px={["4", "6"]}
@@ -78,24 +76,19 @@ export default function Feed() {
       </Flex>
       <Box fontSize={["14px"]} mb={["20", "4"]} px={["4"]}>
         <Text fontWeight={["semibold"]}>1.069 likes</Text>
-        <Box gap={["1"]} display={["block", "flex"]} flexDirection={["row"]}>
-          <Text fontWeight={["semibold"]}>terrylucas</Text>
-          <Text textAlign={["start"]} fontWeight={["normal"]}>
-            Imperdiet in sit rhoncus, eleifend tellus augue lectus potenti
-            pellentesque...
-          </Text>
-          <Text
-            fontWeight={["normal"]}
-            fontSize={["14px"]}
-            color={["gray.500"]}
-          >
-            more
-          </Text>
-        </Box>
-        <Text fontSize={["14px"]} color={["#8E8E8E"]}>
+        <Text>
+          <span className="font-semibold mr-2">terrylucas</span>
+          Imperdiet in sit rhoncus, eleifend tellus augue lectus potenti
+          pellentesque... <span className="text-gray-500">more</span>
+        </Text>
+        <Text fontSize={["14px"]} color={["#8E8E8E"]} fontWeight={["normal"]}>
           View all 100 comments
         </Text>
-        <Text fontSize={["14px"]} color={["#8E8E8E"]}>
+        <Text
+          fontSize={["14px"]}
+          color={["#8E8E8E"]}
+          fontWeight={["thin", "normal"]}
+        >
           1 hour ago
         </Text>
       </Box>

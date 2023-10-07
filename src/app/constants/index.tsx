@@ -27,11 +27,11 @@ export const stories = [
     image: "/images/post-1.png",
   },
   {
-    name: "lauramatt...",
+    name: "lauramatt",
     image: "/images/Profile-Pic-2.png",
   },
   {
-    name: "harrypresscott",
+    name: "harrypres...",
     image: "/images/Profile-Pic-3.png",
   },
   {
@@ -39,7 +39,7 @@ export const stories = [
     image: "/images/Profile-Pic-4.png",
   },
   {
-    name: "christinaste...",
+    name: "christinas...",
     image: "/images/Profile-Pic-5.png",
   },
   {
