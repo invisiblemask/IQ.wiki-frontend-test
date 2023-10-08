@@ -29,7 +29,7 @@ export default function Carousel({ slides }: CarouselProps) {
 
   const next = () => {
     setCurrent((current) =>
-      current !== slides.length - 1 ? current + 1 : current - 1
+      current !== slides.length - 1 ? current + 1 : current
     );
   };
 
