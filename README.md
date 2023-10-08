@@ -3,27 +3,36 @@
 This repository contains a nextjs application of an Instagram clone home page.
 
 ## Table of Contents
+
 - Installation
 - Usage
 - Project Structure
 - Dependencies
 
 ## Installation
+
 To run the application locally, please follow these steps:
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/invisiblemask/lendsqr-fe-test.git
 ```
+
 2. Navigate to the project directory:
+
 ```bash
 cd iq.wiki-frontend-test
 ```
+
 3. Install the dependencies:
+
 ```bash
 npm install
 ```
+
 4. Start the development server:
+
 ```bash
 npm run dev
 # or
@@ -31,6 +40,7 @@ yarn dev
 # or
 pnpm dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Feel free to explore and interact with the application to understand its functionality better.
@@ -70,6 +80,7 @@ lendsqr-frontend-test
 ```
 
 ## Technologies Used
+
 The project is built with the following technologies:
 
 - Next.js: A React framework for building server-side rendered and static web applications.
@@ -77,12 +88,8 @@ The project is built with the following technologies:
 - Chakra UI: A simple, modular, and accessible component library that gives you the building blocks to build your React applications.
 - Tailwind CSS: A popular CSS framework that provides more flexibility and features for styling.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-
 ## Dependencies
+
 The application relies on the following dependencies (included in the `package.json` file):
 
 - next
