@@ -1,4 +1,4 @@
-export const icons = [
+export const icons: ReusableProps[] = [
   {
     name: "home icon",
     image: "/icons/home-black.png",
@@ -17,7 +17,7 @@ export const icons = [
   },
 ];
 
-export const stories = [
+export const stories: ReusableProps[] = [
   {
     name: "Your Story",
     image: "/images/profile-img.png",
@@ -56,7 +56,7 @@ export const stories = [
   },
 ];
 
-export const navIcons = [
+export const navIcons: ReusableProps[] = [
   {
     name: "home icon",
     image: "/icons/home-black.png",
@@ -76,5 +76,33 @@ export const navIcons = [
   {
     name: "love icon",
     image: "/icons/love.png",
+  },
+];
+
+export const suggestions: SuggestionsProps[] = [
+  {
+    image: "/images/post-1.png",
+    name: "terylucas",
+    text: "Followed by terylucas + 2 more",
+  },
+  {
+    image: "/images/Profile-Pic-2.png",
+    name: "lauramatthews",
+    text: "Followed by lauramatthews + 2 more",
+  },
+  {
+    image: "/images/Profile-Pic-3.png",
+    name: "harryprescott",
+    text: "Followed by harryprescott + 2 more",
+  },
+  {
+    image: "/images/Profile-Pic-4.png",
+    name: "ednamanz",
+    text: "Followed by ednamanz + 2 more",
+  },
+  {
+    image: "/images/Profile-Pic-5.png",
+    name: "christinasterling",
+    text: "Followed by christinasterling + 2 m...",
   },
 ];

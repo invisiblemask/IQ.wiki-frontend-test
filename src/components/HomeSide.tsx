@@ -1,3 +1,4 @@
+import { suggestions } from "@/app/constants";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
 export default function HomeSide() {
@@ -42,156 +43,39 @@ export default function HomeSide() {
         </Box>
       </Flex>
       <Flex flexDirection="column">
-        <Box
-          gap="4"
-          alignItems="center"
-          display="flex"
-          justifyContent="space-between"
-          flexDirection="row"
-          mt="4"
-        >
-          <Flex gap="2" alignItems="center">
-            <Image
-              src="/images/post-1.png"
-              alt="profile img"
-              borderRadius="full"
-              objectFit="cover"
-              width="32px"
-              height="32px"
-            />
-            <Flex flexDirection="column">
-              <Text color="#262626" fontSize="14px">
-                terylucas
-              </Text>
-              <Text color="#8E8E8E" fontSize="12px">
-                Followed by terylucas + 2 more
-              </Text>
+        {suggestions.map((suggestion, index) => (
+          <Box
+            key={index}
+            gap="4"
+            alignItems="center"
+            display="flex"
+            justifyContent="space-between"
+            flexDirection="row"
+            mt="4"
+          >
+            <Flex gap="2" alignItems="center">
+              <Image
+                src={suggestion.image}
+                alt="profile img"
+                borderRadius="full"
+                objectFit="cover"
+                width="32px"
+                height="32px"
+              />
+              <Flex flexDirection="column">
+                <Text color="#262626" fontSize="14px">
+                  {suggestion.name}
+                </Text>
+                <Text color="#8E8E8E" fontSize="12px">
+                  {suggestion.text}
+                </Text>
+              </Flex>
             </Flex>
-          </Flex>
-          <Box color="#0095F6" fontSize="12px">
-            Follow
+            <Box color="#0095F6" fontSize="12px">
+              Follow
+            </Box>
           </Box>
-        </Box>
-        <Box
-          gap="4"
-          alignItems="center"
-          display="flex"
-          justifyContent="space-between"
-          flexDirection="row"
-          mt="4"
-        >
-          <Flex gap="2" alignItems="center">
-            <Image
-              src="/images/Profile-Pic-2.png"
-              alt="profile img"
-              borderRadius="full"
-              objectFit="cover"
-              width="32px"
-              height="32px"
-            />
-            <Flex flexDirection="column">
-              <Text color="#262626" fontSize="14px">
-                lauramatthews
-              </Text>
-              <Text color="#8E8E8E" fontSize="12px">
-                Followed by lauramatthews + 2 more
-              </Text>
-            </Flex>
-          </Flex>
-          <Box color="#0095F6" fontSize="12px">
-            Follow
-          </Box>
-        </Box>
-        <Box
-          gap="4"
-          alignItems="center"
-          display="flex"
-          justifyContent="space-between"
-          flexDirection="row"
-          mt="4"
-        >
-          <Flex gap="2" alignItems="center">
-            <Image
-              src="/images/Profile-Pic-3.png"
-              alt="profile img"
-              borderRadius="full"
-              objectFit="cover"
-              width="32px"
-              height="32px"
-            />
-            <Flex flexDirection="column">
-              <Text color="#262626" fontSize="14px">
-                harryprescott
-              </Text>
-              <Text color="#8E8E8E" fontSize="12px">
-                Followed by harryprescott + 2 more
-              </Text>
-            </Flex>
-          </Flex>
-          <Box color="#0095F6" fontSize="12px">
-            Follow
-          </Box>
-        </Box>
-        <Box
-          gap="4"
-          alignItems="center"
-          display="flex"
-          justifyContent="space-between"
-          flexDirection="row"
-          mt="4"
-        >
-          <Flex gap="2" alignItems="center">
-            <Image
-              src="/images/Profile-Pic-4.png"
-              alt="profile img"
-              borderRadius="full"
-              objectFit="cover"
-              width="32px"
-              height="32px"
-            />
-            <Flex flexDirection="column">
-              <Text color="#262626" fontSize="14px">
-                ednamanz
-              </Text>
-              <Text color="#8E8E8E" fontSize="12px">
-                Followed by ednamanz + 2 more
-              </Text>
-            </Flex>
-          </Flex>
-          <Box color="#0095F6" fontSize="12px">
-            Follow
-          </Box>
-        </Box>
-        <Box
-          gap="4"
-          alignItems="center"
-          display="flex"
-          justifyContent="space-between"
-          flexDirection="row"
-          mt="4"
-        >
-          <Flex gap="2" alignItems="center">
-            <Image
-              src="/images/Profile-Pic-5.png"
-              alt="profile img"
-              borderRadius="full"
-              objectFit="cover"
-              width="32px"
-              height="32px"
-            />
-            <Flex flexDirection="column">
-              <Text color="#262626" fontSize="14px">
-                christinasterling
-              </Text>
-              <Text color="#8E8E8E" fontSize="12px">
-                Followed by christinasterling + 2 m...
-              </Text>
-            </Flex>
-          </Flex>
-          <Box color="#0095F6" fontSize="12px">
-            Follow
-          </Box>
-        </Box>
+        ))}
       </Flex>
     </Box>
   );
