@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav>
       <Box
-        px={["6", "0", "0", "0", "0", "400px"]}
+        px={["6", "0", "0", "0", "0", "200px"]}
         py="1"
         position="fixed"
         h={["53px"]}
